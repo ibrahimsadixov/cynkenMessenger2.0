@@ -1,0 +1,54 @@
+.background {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-color: #0A0A0A;
+}
+
+
+
+
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    max-width: 1000px;
+    height: 60%;
+    max-height: 500px;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.1px);
+    -webkit-backdrop-filter: blur(1.1px);
+}
+
+.eye {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 55%;
+    gap: 10px;
+    cursor: pointer;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+    color: whitesmoke;
+
+}
+
+.square {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(245, 245, 245, .8);
+    border: 1px solid whitesmoke;
+    border-radius: 50%;
+}

@@ -1,0 +1,254 @@
+@media (min-width: 580px) and (max-width: 1200px) {
+
+    #displayUsername {
+        font-size: .8rem !important;
+    }
+
+    .lastMessage {
+        font-size: .4rem !important;
+    }
+
+    .messenger .username {
+        font-size: .8rem !important;
+    }
+
+    .messenger .profileImage {
+        max-width: 25px !important;
+        max-height: 25px !important;
+        min-width: 15px !important;
+        min-height: 15px !important;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .background {
+        width: 100%;
+        height: 100vh;
+        height: -webkit-fill-available;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #0A0A0A;
+        color: whitesmoke;
+        font-family: 'Source Code Pro', monospace;
+    }
+
+    #mobileClose {
+      display: flex;
+    }
+
+
+
+    .right {
+        width: 0;
+    }
+
+    .left {
+        width: 100%;
+
+    }
+
+    #userList {
+        max-height: auto !important;
+    }
+
+    .myMessage #messageInput {
+
+        width: 75%;
+    }
+
+    .sendBtn {
+
+        width: 20%;
+    }
+
+    .otherUser .profileImage {
+        min-width: 50px !important;
+        min-height: 50px !important;
+        max-width: 80px !important;
+        max-height: 80px !important;
+    }
+
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .close {
+        right: 30px;
+        top: 30px;
+    }
+
+    .sendBtn:hover {
+        background-color: #121212;
+        transition: .3s;
+    }
+
+    #userList .listItem:hover .username {
+        font-size: 1rem;
+        transition: .3s;
+    }
+
+    .messenger #profilePhoto:hover .img {
+        opacity: 0;
+        transition: .3s;
+    }
+
+    .done {
+        right: 10%;
+    }
+
+    .moreDiv {
+        padding: 0;
+        gap: 20px;
+        height: 0;
+        width: 150px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #353434;
+        top: 30px;
+        z-index: 9;
+        left: -120px !important;
+        border-radius: 3px;
+        overflow: hidden;
+        transition: .1s;
+    }
+
+
+    .moreDivActive {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        gap: 10px;
+        height: auto;
+        width: 150px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #353434;
+        top: 30px;
+        z-index: 9;
+        left: -120px !important;
+        border-radius: 3px;
+        overflow: hidden;
+        transition: .1s;
+
+    }
+
+    #userMessagesContainer {
+    margin-top: 15px !important
+    }
+
+    .profileImage:hover {
+        scale: 1;
+        transition: .3s;
+    }
+
+    .largen img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        border: 3px solid rgb(231, 205, 205);
+        box-shadow:
+            0 0 0 2px rgb(255, 255, 255),
+            0 0 0 2px rgb(255, 255, 255);
+    }
+
+    .symbCount {
+        position: absolute;
+        bottom: -20px;
+        right: 26%;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+     
+
+    }
+
+    #messageInput {
+        width: 65% !important;
+
+    }
+
+    .fileLabel {
+        width: 19%;
+        height: auto;
+    }
+
+    .fileLabel:hover {
+        scale: 1;
+        transition: .3s;
+    }
+
+
+    .sending img {
+        height: auto;
+        max-width: 200px;
+
+    }
+
+    .sending video {
+        height: auto;
+        max-width: 200px;
+
+    }
+
+    .enlargable img {
+        max-height: 200px;
+        max-width: 200px;
+        border: 3px solid rgb(231, 205, 205);
+
+    }
+
+    .accountDetails {
+        height: 150px;
+        max-width: 200px;
+        background-color: #112122;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #userMessagesContainer #messageList .other {
+        max-width: 60% !important;
+        padding-right: 5px !important;
+    }
+
+    #userMessagesContainer #messageList .me {
+        max-width: 60% !important;
+        padding-right: 5px !important;
+    }
+
+    .myMessage {
+        gap: 10px;
+    }
+
+}
+
+
+@media (max-width: 300px) {
+    .myMessage button {
+        font-size: .6rem !important;
+        height: 35px !important;
+    }
+
+    .myMessage .fileLabel {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .myMessage textArea {
+        width: 80% !important;
+        height: 35px !important;
+    }
+
+    .account {
+        font-size: .9rem;
+    }
+}

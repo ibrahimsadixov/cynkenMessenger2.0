@@ -1,0 +1,991 @@
+.background {
+    width: 100%;
+    height: 100vh;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A0A0A;
+    color: whitesmoke;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.container {
+    height: 100%;
+    width: 1600px;
+    max-width: 1600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.messenger {
+    height: 100%;
+    width: 90%;
+    display: flex;
+}
+
+.left {
+    width: 30%;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    height: 100vh;
+    height: -webkit-fill-available;
+}
+
+.right {
+    width: 70%;
+    background-color: #112122;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: hidden;
+    height: 100vh;
+    height: -webkit-fill-available;
+}
+
+
+#userList {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 580px;
+    overflow-y: scroll;
+    width: 100%;
+
+
+}
+
+#userList h2 {
+    margin-left: 15px;
+    margin-bottom: 8px;
+}
+
+#userList li {
+    cursor: pointer;
+    list-style-type: none;
+}
+
+#userMessagesContainer {
+    margin-top: 30px;
+    width: 100%;
+    height: 100vh;
+    height: -webkit-fill-available ;
+    overflow: hidden;
+}
+
+#userMessagesContainer #messageList {
+    width: 100%;
+    margin-top: 60px;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#userMessagesContainer #messageList li {
+    width: 100%;
+    display: flex;
+    height: auto;
+    align-items: end;
+
+}
+
+#userMessagesContainer #messageList .me {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 45%;
+    background-color: rgb(236, 232, 232);
+    padding: 5px;
+    color: #0A0A0A;
+    padding-right: 15px;
+    position: relative;
+}
+
+#userMessagesContainer #messageList .other {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 45%;
+    background-color: rgb(197, 195, 195);
+    padding: 5px;
+    color: #0A0A0A;
+    position: relative;
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f12a;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+#messageInput {
+    width: 83%;
+    height: 50px;
+    padding: 15px;
+    border: 0 solid;
+    border-radius: 8px;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word;
+
+}
+
+.sendBtn {
+    width: 10%;
+    height: 50px;
+    cursor: pointer;
+    font-size: .8rem;
+    font-family: 'Source Code Pro', monospace;
+    color: whitesmoke;
+    background-color: #121212;
+    border: 0 solid;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+
+
+.time {
+    position: absolute;
+    bottom: -20px;
+    width: auto;
+    display: flex;
+    width: 100px;
+    color: grey;
+}
+
+
+#userMessagesContainer #messageList .me,
+#userMessagesContainer #messageList .other {
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+.myMessage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+#userList li {
+    height: 30px;
+
+}
+
+#userList span {
+    transition: .3s
+}
+
+
+
+
+#search {
+    padding-left: 15px;
+    width: 90%;
+    height: 35px;
+    margin-top: 20px;
+    border: 0 solid;
+    border-radius: 8px;
+
+}
+
+
+.account {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    margin-top: 20px;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+#more {
+    display: flex;
+    align-items: center;
+    padding-bottom: 3px;
+    cursor: pointer;
+    transition: .3s;
+    color: white;
+}
+
+
+
+#displayUsername {
+    cursor: default;
+}
+
+.account img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.listItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    height: 55px !important;
+    transition: .3s;
+    border-bottom: 1px solid rgb(194, 166, 166);
+    position: relative;
+    justify-content: space-around;
+}
+
+.listItem img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.messenger .username {
+    width: 40%;
+    overflow: hidden;
+    margin-right: 3px;
+    margin-right: 10px;
+}
+
+.lastMessage {
+    width: 40%;
+    overflow: hidden;
+    margin-left: 3px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+.otherUser {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    cursor: default;
+
+
+}
+
+.otherUser img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.large {
+    position: fixed;
+    height: 300px;
+    width: 300px;
+}
+
+.messenger #profilePhoto {
+    position: relative;
+}
+
+.img {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: .3s;
+}
+
+
+.seen {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 50%;
+    margin-top: 5px;
+    border: 3px solid;
+    background-color: transparent;
+    border-color: rgb(228, 92, 92);
+}
+
+.messenger .profileImage {
+    border: 1px solid;
+    border-color: rgb(194, 166, 166);
+    cursor: pointer;
+}
+
+.seen-active {
+    border-color: rgb(153, 167, 226) !important;
+    background-color: rgb(153, 167, 226);
+    transition: .3s;
+}
+
+.usersHeader {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-left: 15px;
+}
+
+.lastMessage {
+    font-size: .8rem;
+
+}
+
+.countSpan {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: #cf2121c0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    left: 5px;
+    top: 2px;
+}
+
+/* more div */
+#more {
+    position: relative;
+}
+
+.moreDiv {
+    padding: 0;
+    gap: 20px;
+    height: 0;
+    width: 150px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    background-color: #353434;
+    top: 30px;
+    z-index: 9;
+    left: 10px;
+
+    border-radius: 3px;
+    overflow: hidden;
+
+    transition: .1s;
+}
+
+
+#logOut {
+    cursor: pointer;
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moreItem {
+
+    padding: 7px;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.moreItem {
+    background-color: transparent;
+    transition: .3s;
+
+}
+
+
+
+.moreDivActive {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    gap: 10px;
+    height: auto;
+    width: 150px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #353434;
+    top: 30px;
+    z-index: 9;
+    left: 10px;
+
+    border-radius: 3px;
+    overflow: hidden;
+
+    transition: .1s;
+}
+
+#notificationSwitch {
+    cursor: pointer;
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#notificationSwitch i {
+    font-size: 1.2rem !important;
+}
+
+.moreRelative {
+    position: relative;
+}
+
+/* more div */
+
+.logoBack {
+    width: 100%;
+  
+    background-image: url(/assets/images/logo/comandantelogo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: .1;
+    margin-top: 30px;
+    height: -webkit-fill-available;
+    height: 85vh;
+}
+
+/* king  */
+
+@media (min-width: 480px) {
+    #more span:hover {
+        color: rgb(197, 193, 193);
+        transition: .3s;
+    }
+
+    #userList .listItem:hover {
+        background-color: #0c0c0c;
+        transition: .3s;
+    }
+
+    #userList .listItem:hover .username {
+        font-size: 1.3rem;
+        transition: .3s;
+    }
+
+
+}
+
+#imageChange {
+    height: 0;
+    width: 200px;
+    background-color: #353434;
+    z-index: 9;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    gap: 10px;
+    transition: .3s;
+    cursor: default;
+}
+
+.openImageChange div {
+    padding: 7px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: rgb(43, 39, 39);
+    cursor: pointer;
+}
+
+
+.openImageChange {
+    height: 100px !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: .3s;
+}
+
+
+
+.text {
+    color: white;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.done {
+    height: auto;
+    width: auto;
+    background-color: rgb(199, 67, 15);
+    z-index: 9;
+    border-radius: 8px;
+    padding: 15px;
+    color: white;
+    position: absolute;
+    font-size: 1rem;
+    font-family: 'Source Code Pro', monospace;
+    right: 50%;
+    top: 25%;
+}
+
+
+
+
+/* king */
+
+
+#mobileClose {
+    cursor: pointer;
+    color: white;
+    width: 23px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-top: 15px;
+    display: none;
+    
+}
+
+
+/* mobile */
+.closed {
+    overflow: hidden;
+    width: 0 !important;
+    padding: 0 !important;
+ 
+}
+
+.open {
+    width: 100% !important;
+
+}
+
+.me {
+    border: 0 solid transparent;
+    border-radius: 7px 0 7px 7px;
+    background-color: rgb(163, 231, 163);
+}
+
+.other {
+    border: 0 solid transparent;
+    border-radius: 0 7px 7px 7px;
+    background-color: rgb(168, 168, 219);
+}
+
+.largen {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    height: -webkit-fill-available ;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+}
+
+.largen img {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 3px solid rgb(231, 205, 205);
+    box-shadow:
+        0 0 0 2px rgb(255, 255, 255),
+        0 0 0 2px rgb(255, 255, 255);
+}
+
+
+.accountDetailsDiv {
+    height: 100vh;
+    height: -webkit-fill-available ;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.changePasswordDiv {
+    height: 100vh;
+    height: -webkit-fill-available ;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.changeUsernameDiv {
+    height: 100vh;
+    height: -webkit-fill-available ;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accountDetails {
+
+    background-color: #112122;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 60px 10px;
+}
+
+.accountDetails sub {
+
+    text-align: center;
+}
+
+.accountDetails sub {
+    cursor: pointer;
+    color: white;
+    font-family: monospace;
+    font-size: 1.2rem;
+    padding: 5px;
+
+}
+
+
+
+.profileImage {
+    transition: .3s;
+}
+
+.profileImage:hover {
+    scale: 1.05;
+    transition: .3s;
+}
+
+.symbCount {
+    position: absolute;
+    bottom: -20px;
+    right: 13%;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+
+
+.fileLabel {
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.fileLabel:hover {
+    scale: 1.1;
+    transition: .3s;
+
+}
+
+.fileInput {
+    display: none;
+}
+
+.fileLabel {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 25px;
+    min-height: 25px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    border-radius: 16px;
+}
+
+.fileLabel span {
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+}
+
+.fileMessage {
+    height: 200px;
+    max-width: 65%;
+    width: auto;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    padding: auto;
+}
+
+.filed {
+    background-color: transparent !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+.filedList {
+    flex-direction: row-reverse !important;
+    justify-content: flex-start !important;
+}
+
+
+
+
+
+
+.sending {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    height: -webkit-fill-available ;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 100;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+}
+
+.sending img {
+    height: auto;
+    max-height: 60vh;
+    max-width: 400px;
+
+    border: 3px solid rgb(231, 205, 205);
+
+}
+
+.sending video {
+    height: 400px;
+    width: 400px;
+    border: 3px solid rgb(231, 205, 205);
+
+}
+
+.sending button {
+    padding: 5px 15px;
+    font-family: monospace;
+    font-size: 1rem;
+    border: 1px solid;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #0A0A0A;
+    color: white;
+}
+
+
+.enlargable {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    height: -webkit-fill-available ;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 100;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+}
+
+.enlargable img {
+    height: auto;
+    max-height: 60vh;
+    max-width: 400px;
+    border: 3px solid rgb(231, 205, 205);
+
+}
+
+.usersT {
+    margin-top: 15px;
+
+}
+
+.searchArea {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#clear {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    background-color: transparent;
+    border: 0 solid;
+    color: black;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.closePassword {
+    cursor: pointer !important;
+    position: fixed;
+    right: 25px !important;
+    top: 25px !important;
+    z-index: 2000;
+    background-color: transparent;
+    color: white;
+    border: 0;
+    font-size: 2rem;
+}
+
+.closeUsername {
+    cursor: pointer !important;
+    position: fixed;
+    right: 25px !important;
+    top: 25px !important;
+    z-index: 2000;
+    background-color: transparent;
+    color: white;
+    border: 0;
+    font-size: 2rem;
+}
+
+
+
+.usernameChangeDiv {
+    background-color: white;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.usernameChangeDiv input {
+    font-size: .8rem;
+}
+
+.passwordChangeDiv input {
+
+    font-size: .8rem;
+
+}
+
+.currentPasswordInput,
+.newUsernameInput,
+.submitButton {
+    display: block;
+    min-width: 200px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.passwordChangeDiv {
+    background-color: white;
+    padding: 50px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.passwordInput,
+.newPasswordInput,
+.confirmPasswordInput,
+.submitButton {
+    display: block;
+    min-width: 200px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submitButton {
+    background-color: #112122;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submitButton:hover {
+    background-color: #0A0A0A;
+    transition: .3s;
+}
+.listItem{
+    cursor: pointer;
+}
+
+.remove{
+    color: white;
+    font-size: 3rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.remove:hover{
+    color: rgb(119, 206, 21);
+    font-size: 3rem;
+    transition: .3s;
+}
+span{
+    cursor: pointer !important;
+}

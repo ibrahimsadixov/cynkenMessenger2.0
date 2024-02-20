@@ -1,0 +1,56 @@
+
+#registerForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+#registerForm input{
+    width: 60%;
+    height: 40px;
+    padding-left: 15px;
+    border: 0 solid transparent;
+    border-radius: 8px;
+    background-color:  rgba(255, 255, 255, .8);
+}
+#registerForm button{
+    padding: 10px 15px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #112122;
+    border: 1px solid transparent ;
+    color: white;
+    border-radius: 8px;
+    transition: .3s;
+}
+#registerForm button:hover{
+    background-color: #1b3031;
+    border: 1px solid rgb(192, 186, 186) ;
+    transition: .3s;
+}
+.login{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    padding: 10px 20px;
+    background-color: rgba(209, 96, 96, 0.3);
+    border: 0 solid transparent;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.login:hover{
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    transition: .3s;
+
+}
